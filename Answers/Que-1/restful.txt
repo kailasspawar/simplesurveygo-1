@@ -1,0 +1,29 @@
+      RESTful web services are built to work best on the Web. 
+       Representational State Transfer (REST) is an architectural style that specifies constraints, 
+       such as the uniform interface, that if applied to a web service induce desirable properties, 
+       such as performance, scalability, and modifiability, that enable services to work best on the Web. 
+       In the REST architectural style, data and functionality are considered resources and are accessed using 
+       Uniform Resource Identifiers (URIs), typically links on the Web. The resources are acted upon by using a 
+       set of simple, well-defined operations. The REST architectural style constrains an architecture to a client/server 
+       architecture and is designed to use a stateless communication protocol, typically HTTP. In the REST architecture style, 
+       clients and servers exchange representations of resources by using a standardized interface and protocol.
+ 
+     We communicate with the backend by using POST,GET,PUT,DELETE calls in restful apis.
+     Post is used for insertion or we want to post something to the the database
+     Get is used for Retriving or querying on database 
+     Put is used to update the existing data
+
+     Restful web services are a 'family' of web services. Some would call it an architecture.
+     RESTful web services use the HTTP protocol to perform requests from a web service. They use the HTTP verbs: GET, POST, PUT 
+     and DELETE (and others, sometimes). The requests themselves are to URLs which represent resources... 
+     sometimes the requests will contain data in the body that could by HTML, JSON, binary data or other.
+
+     A purely RESTful web service only requires the URL and the HTTP verb to describe the requested action... 
+     the body data is usually a payload to be involved in the requested action... it should not dictate the requested action
+
+    SOAP, on the other hand, is actually a protocol. It is usually transported over HTTP, but the HTTP request is 
+    just a method to get the SOAP packet to the necessary handler. The contents of the SOAP request describes what 
+    the client wants performed. It contains all the necessary information.
+
+    They are two very different ways of implementing Web Services. If you ask the question "Which is better" you'll 
+    probably get strong opinions from both sides. I suggest you investigate further and make up your own mind

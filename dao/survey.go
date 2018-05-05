@@ -2,7 +2,6 @@ package dao
 
 import (
 	"fmt"
-
 	"gopkg.in/mgo.v2/bson"
 )
 
@@ -22,8 +21,14 @@ type Survey struct {
 	Description string     `json:"description" bson:"description"`
 	Questions   []Question `json:"questions" bson:"questions"`
 	Status      bool       `json:"status" bson:"status"`
+	Expdate  Time        `json:"expdate" bson:"expdate"`
 }
+type Time struct {
+  Day int `json:"day" bson:"day"`
+  Month int `json:"month" bson:"month"`
+  Year int `json:"year" bson:"year"`
 
+}
 type SurveyResponse struct {
 	UserName string   `json:"userName" bson:"userName"`
 	Survey   Survey   `json:"survey" bson:"survey"`
@@ -86,3 +91,28 @@ func InsertUserResponse(userResponse SurveyResponse) {
 	clctn := session.DB("simplesurveys").C("survey_response")
 	clctn.Insert(userResponse)
 }
+
+/*func deactivate() interface{} {
+	session := MgoSession.Clone()
+			defer session.Close()
+	   var response []interface{}
+	
+	   c := session.DB("simplesurveys").C("survey")
+	  
+	   colQuerier := bson.M{"expdate":bson.M{"$lt": fromObjectBson}} 
+ 	change := bson.M{"$set": bson.M{"phone": "+86 99 8888 7777", "timestamp": time.Now()}}
+	err = c.Update(colQuerier, change)
+
+			if err!= nil{
+					return nil
+			}else{
+		  return   response
+	   }
+ }
+
+func Deactivate() interface{} {
+  //  go deactivate()
+	return interface{}
+
+}
+//go Deactivate()  */

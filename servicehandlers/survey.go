@@ -31,7 +31,8 @@ func (p SurveyHandler) Get(r *http.Request) SrvcRes {
 }
 
 func (p SurveyHandler) Put(r *http.Request) SrvcRes {
-	return ResponseNotImplemented()
+//		return Response200OK(dao.Deactivate())
+		return ResponseNotImplemented()
 }
 
 func (p SurveyHandler) Post(r *http.Request) SrvcRes {

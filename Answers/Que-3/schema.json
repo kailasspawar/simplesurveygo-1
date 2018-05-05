@@ -1,0 +1,42 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "required":false,
+  "properties":{
+    "colors": [
+      {  
+          "type":"array",
+      "required":true,
+      "properties":{
+        "color": {
+          "type":"string",
+          "required":true
+        },
+        "category": {
+          "type":"string",
+          "required":true
+        },
+        "type": {
+          "type":"string",
+          "required":true
+        },
+        "code": {
+          "type":"object",
+          "required":true,
+        "properties":{
+         "rgba":{
+            "type":"array",
+             "required":true
+           },
+         "hex": {
+            "type":"number"
+           }
+         }
+    }
+ }
+}
+}
+}
+        
+       
+
